@@ -1,0 +1,30 @@
+
+  <form #userForm='ngForm' class="mainForm">
+    
+    <div>
+      <h1 style= "text-align:center">Sign Up</h1>
+      <hr style="width:75%; text-align:center">
+    </div>
+
+   <div style="margin:0px 0px 0px x0px">
+      <label for="name" >First Name</label> <br> 
+      <input type="text" class = "form-control" name="firstrName" [(ngModel)]="firstname">
+      
+      <label for="name" >Last Name</label> <br> 
+      <input type="text" class = "form-control" name="lastName" [(ngModel)]="lastname">
+
+      <label for="name" >Email ID</label> <br> 
+      <input type="text" class = "form-control" name="emailID" [(ngModel)]="emailid">
+
+      <label for="name" >Password</label> <br> 
+      <input type="text" class = "form-control" name="password" [(ngModel)]="password">
+
+      <div style="text-align:right">
+
+          <button class="button1" type="submit" id="Signup" (click)="sendmyData(userForm.value)">SignUp</button>
+      </div>
+
+</div>
+
+{{userForm.value | json }}
+  </form>
